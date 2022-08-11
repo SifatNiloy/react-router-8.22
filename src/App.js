@@ -8,6 +8,8 @@ import Header from './components/Header/Header';
 import FriendDetail from './components/FriendDetail/FriendDetail';
 import Posts from './components/Posts/Posts';
 import PostDetail from './components/PostDetail/PostDetail';
+import Countries from './Countries/Countries';
+import CountryDetail from './components/CountryDetail/CountryDetail';
 
 function App() {
   return (
@@ -20,8 +22,10 @@ function App() {
         <Route path='/posts' element={<Posts></Posts>} >
           <Route path=':postId' element={<PostDetail></PostDetail>} ></Route>
         </Route>
+        <Route path='/country/:countryName' element={<CountryDetail></CountryDetail>}></Route>
         <Route path='/about' element={<About></About>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
+        <Route path='/countries' element={<Countries></Countries>}></Route>
       </Routes>
     </div >
   );
